@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="text-center">Our Restaurants</h1>
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%#= image_path('restaurant.jpg') %>');">
+        <div class="card-description">
+          <h2><%= restaurant.name %></h2>
+          <p><%= restaurant.adress %></p>
+        </div>
+
+        <%= link_to "", restaurant_path(restaurant), class: "card-link" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
